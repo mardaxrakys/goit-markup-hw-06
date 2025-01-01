@@ -27,6 +27,9 @@ body {
   background-color: var(--color-white);
   font-size: 16px;
   letter-spacing: 0.02em;
+
+  margin: 0;
+  overflow-x: hidden; /* Видаляє горизонтальну смугу прокрутки */
 }
 
 .list {
@@ -89,9 +92,10 @@ img {
 }
 
 .container {
-  width: 1158px;
+  max-width: 1158px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 15px; /* Забезпечує відступи для маленьких екранів */
+  width: 100%; /* Контейнер займає всю ширину */
 }
 
 /* #endregion */
@@ -890,6 +894,57 @@ img {
 .modal__button-submit:focus {
   background-color: #404bbf; /* Зміна кольору фону */
   border: none; /* Видалення бордера */
+}
+
+/* #endregion */
+
+/* #region @media*/
+
+/* Використовуйте медіазапити для різних розмірів екрана */
+
+/* Для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+  .header-container,
+  .team__list,
+  .gallery__list {
+    flex-wrap: wrap; /* Розташування у кілька рядків */
+    justify-content: center; /* Центрування контенту */
+  }
+
+  .gallery__item {
+    flex: 1 1 100%; /* Зображення займають 100% ширини */
+    max-width: 100%;
+  }
+
+  .team__item,
+  .gallery__item {
+    max-width: 100%; /* Ширина адаптується до екрану */
+    margin-bottom: 24px; /* Відступ між елементами */
+  }
+
+  .hero__title {
+    font-size: 32px; /* Зменшення розміру шрифту */
+  }
+
+  .hero__button {
+    padding: 12px 24px; /* Менші відступи */
+  }
+}
+
+/* Для планшетів */
+@media screen and (max-width: 1024px) {
+  .header-container,
+  .team__list,
+  .gallery__list {
+    flex-wrap: wrap;
+    justify-content: space-between; /* Вирівнювання між елементами */
+  }
+
+  .team__item,
+  .gallery__item {
+    flex: 1 1 calc(50% - 16px); /* Зображення займають 50% ширини з відступами */
+    max-width: calc(50% - 16px);
+  }
 }
 
 /* #endregion */
