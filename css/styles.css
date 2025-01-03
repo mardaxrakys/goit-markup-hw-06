@@ -997,7 +997,7 @@ img {
     ),
     url('../images/hero-image@1x.jpg');
 }
-
+/* Для екранів з високою щільністю пікселів */
 @media screen and (min-resolution: 2dppx) {
   .hero__bg-image {
     background-image: linear-gradient(
@@ -1008,7 +1008,7 @@ img {
   }
 }
 
-/* Мобільні пристрої */
+/* Мобільні пристрої (максимальна ширина: 768px) */
 @media screen and (max-width: 768px) {
   .hero__bg-image {
     background-image: linear-gradient(
@@ -1029,7 +1029,7 @@ img {
   }
 }
 
-/* Для планшетів */
+/* Планшети (мінімальна ширина: 768px, максимальна ширина: 1157px) */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .hero__bg-image {
     background-image: linear-gradient(
@@ -1050,7 +1050,7 @@ img {
   }
 }
 
-/* Для десктопів */
+/* Десктопи (мінімальна ширина: 1158px) */
 @media screen and (min-width: 1158px) {
   .hero__bg-image {
     background-image: linear-gradient(
