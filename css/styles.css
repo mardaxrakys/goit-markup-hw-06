@@ -207,19 +207,6 @@ img {
   padding: 188px 0;
 }
 
-.hero__bg-image {
-  margin: 0 auto;
-  max-width: 1440px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url('../images/img-name.jpg');
-}
-
 .hero__title {
   color: var(--color-white);
   font-weight: 700;
@@ -944,6 +931,143 @@ img {
   .gallery__item {
     flex: 1 1 calc(50% - 16px); /* Зображення займають 50% ширини з відступами */
     max-width: calc(50% - 16px);
+  }
+}
+
+/* Мобільні пристрої: ширина до 767px */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px; /* Зміна розміру шрифту */
+  }
+  .container {
+    width: 100%; /* Ширина на всю ширину екрана */
+    padding: 0 15px;
+  }
+  .header-nav__list {
+    flex-direction: column; /* Вертикальне розташування навігації */
+  }
+  .team__list {
+    flex-direction: column; /* Вертикальне розташування елементів команди */
+  }
+}
+
+/* Планшети: ширина від 768px до 1157px */
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .container {
+    width: 720px; /* Зміна ширини контейнера */
+  }
+  .header-nav__list {
+    gap: 20px; /* Менший проміжок між пунктами меню */
+  }
+  .team__list {
+    gap: 16px; /* Менший проміжок між картками команди */
+  }
+  .gallery__list {
+    gap: 32px; /* Зміна проміжку в галереї */
+  }
+}
+
+/* Десктопи: ширина від 1158px */
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px; /* Максимальна ширина контейнера */
+  }
+  .header-nav__list {
+    gap: 40px; /* Проміжок між пунктами меню */
+  }
+  .team__list {
+    gap: 24px; /* Проміжок між елементами команди */
+  }
+  .gallery__list {
+    gap: 48px; /* Більший проміжок в галереї */
+  }
+}
+
+/* -------------------------------------------- */
+
+.hero__bg-image {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/hero-image@1x.jpg');
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .hero__bg-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-image@2x.jpg');
+  }
+}
+
+/* Мобільні пристрої */
+@media screen and (max-width: 768px) {
+  .hero__bg-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-image-mobile@1x.jpg');
+  }
+
+  @media screen and (min-resolution: 2dppx) {
+    .hero__bg-image {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/hero-image-mobile@2x.jpg');
+    }
+  }
+}
+
+/* Для планшетів */
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .hero__bg-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-image-tablet@1x.jpg');
+  }
+
+  @media screen and (min-resolution: 2dppx) {
+    .hero__bg-image {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/hero-image-tablet@2x.jpg');
+    }
+  }
+}
+
+/* Для десктопів */
+@media screen and (min-width: 1158px) {
+  .hero__bg-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-image-desktop@1x.jpg');
+  }
+
+  @media screen and (min-resolution: 2dppx) {
+    .hero__bg-image {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url('../images/hero-image-desktop@2x.jpg');
+    }
   }
 }
 
